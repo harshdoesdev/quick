@@ -6,33 +6,42 @@
 
 -- string $state: *$quick.initial-state
 
-
+-- ftd.column:
+align-content: center
+width: fill-container
+height: fill-container
+spacing.fixed.rem: 2
 
 ;; PRINT CURRENT FORM STATE
 
 -- ftd.text: $state
 
-
-
 ;; FORM
 
 -- quick.form:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.rem: 1
 
 -- quick.text-field: Full name
 key: $form-key
 name: name
 placeholder: Your Full Name
-full-width: true
 
 -- quick.text-field: Job Position
 key: $form-key
 name: job
 placeholder: Your Job Position
-full-width: true
 
 -- quick.button: Submit
 key: $form-key
 action: https://reqres.in/api/users
 $state: $state
 
+-- end: ftd.column
+
 -- end: quick.form
+
+-- end: ftd.column

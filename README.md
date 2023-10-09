@@ -5,6 +5,7 @@ a blazing-fast fastn library for creating forms, quick! [DEMO](https://harshdoes
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Example Usage](#example-usage)
+- [Todos](#todos)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -62,6 +63,16 @@ $state: $state
 
 -- end: quick.form
 ```
+
+## Todos
+
+My todos:
+- [x] Basic Async Form
+- [] Implement a switch element (I don't like checkboxes)
+- [] Enhance styling support for the forms
+- [] Integrate radio buttons
+- [] Add dropdown functionality
+- [] Include Email, Tel, and other input tags
 
 ## Contributing
 

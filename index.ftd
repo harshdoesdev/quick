@@ -42,6 +42,7 @@ string key:
 string name:
 boolean full-width: false
 optional string placeholder:
+boolean multiline: false
 
 -- ftd.column:
 spacing.fixed.rem: .25
@@ -58,6 +59,7 @@ padding.rem: .5
 margin-bottom.rem: .25
 placeholder if { !ftd.is_empty(text-field.placeholder) }: $text-field.placeholder
 width if { text-field.full-width }: fill-container
+multiline: $text-field.multiline
 $on-input$: $handle-input(key = $text-field.key, name = $text-field.name, value = $VALUE)
 
 -- end: ftd.column

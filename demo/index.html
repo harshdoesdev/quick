@@ -447,6 +447,7 @@ try {
 let __args__ = {
 full_width: false,
 placeholder: null,
+multiline: false,
 };
 inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
 __args__ = fastn_utils.getArgs(__args__, args);
@@ -502,6 +503,7 @@ return __args__.placeholder;
 }
 }
 ), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Multiline, __args__.multiline, inherited);
 }
 ]), inherited);
 return parenti0;

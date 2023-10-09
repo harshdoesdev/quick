@@ -1,5 +1,5 @@
 # quick 🚀
-a blazing-fast fastn library for creating forms, quick!
+a blazing-fast fastn library for creating forms, quick! [DEMO](https://harshdoesdev.github.io/quick/demo/)
 
 ## Table of Contents
 - [Installation](#installation)

@@ -1,0 +1,38 @@
+-- import: harshdoesdev.github.io/quick
+
+;; SETUP
+
+-- string form-key: user-registration-form
+
+-- string $state: *$quick.initial-state
+
+
+
+;; PRINT CURRENT FORM STATE
+
+-- ftd.text: $state
+
+
+
+;; FORM
+
+-- quick.form:
+
+-- quick.text-field: Full name
+key: $form-key
+name: name
+placeholder: Your Full Name
+full-width: true
+
+-- quick.text-field: Job Position
+key: $form-key
+name: job
+placeholder: Your Job Position
+full-width: true
+
+-- quick.button: Submit
+key: $form-key
+action: https://reqres.in/api/users
+$state: $state
+
+-- end: quick.form

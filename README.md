@@ -68,11 +68,11 @@ $state: $state
 
 My todos:
 - [x] Basic Async Form
-- [] Implement a switch element (I don't like checkboxes)
-- [] Enhance styling support for the forms
-- [] Integrate radio buttons
-- [] Add dropdown functionality
-- [] Include Email, Tel, and other input tags
+- [_] Implement a switch element (I don't like checkboxes)
+- [_] Enhance styling support for the forms
+- [_] Integrate radio buttons
+- [_] Add dropdown functionality
+- [_] Include Email, Tel, and other input tags
 
 ## Contributing
 

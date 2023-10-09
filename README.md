@@ -12,12 +12,12 @@ a blazing-fast fastn library for creating forms, quick! [DEMO](https://harshdoes
 
 To get started with `quick`, simply add it as a dependency in your `FASTN.ftd` and import it into your project using the following import statement:
 
-`**FASTN.ftd**`
+`FASTN.ftd`
 ```
 -- fastn.dependency: harshdoesdev.github.io/quick
 ```
 
-`**index.ftd**`
+`index.ftd`
 ```ftd
 -- import: harshdoesdev.github.io/quick
 ```

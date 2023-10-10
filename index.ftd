@@ -2,13 +2,13 @@
 ;; FORM STATE
 ;; ==================
 
--- string $initial-state: INITIAL
+-- string initial-state: INITIAL
 
--- string $loading-state: LOADING
+-- string loading-state: LOADING
 
--- string $loaded-state: LOADED
+-- string loaded-state: LOADED
 
--- string $error-state: ERROR
+-- string error-state: ERROR
 
 
 

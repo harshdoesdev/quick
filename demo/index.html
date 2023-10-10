@@ -330,7 +330,7 @@ padding-bottom: 3px;
 </style>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<body data-id="1"><div data-id="2" class="ft_column __w-1 __h-2"><div data-id="3" class="ft_column __w-3 __h-4 __jc-5 __ali-6 __g-7"><div data-id="4">INITIAL</div><div data-id="5" class="ft_column __w-8 __g-9"><div data-id="6" class="ft_column __w-10 __jc-11 __ali-12 __g-13"><div data-id="7" class="ft_column __g-15"><comment data-id="8"></comment><div data-id="9" class="__rl-16">Full name</div><input data-id="10" placeholder="Your Full Name" class="__p-18 __mb-19 __bw-20 __bc-21"></input></div><div data-id="11" class="ft_column __g-23"><comment data-id="12"></comment><div data-id="13" class="__rl-24">Job Position</div><input data-id="14" placeholder="Your Job Position" class="__p-26 __mb-27 __bw-28 __bc-29"></input></div><div data-id="15" class="__cur-30 __p-31 __bgc-32 __rl-33">Submit</div></div></div></div></div></body><style id="styles">
+<body data-id="1"><div data-id="2" class="ft_column __w-1 __h-2"><div data-id="3" class="ft_column __w-3 __h-4 __jc-5 __ali-6 __g-7"><comment data-id="4"></comment><div data-id="5">INITIAL</div><div data-id="6" class="ft_column __w-8 __g-9"><div data-id="7" class="ft_column __w-10 __jc-11 __ali-12 __g-13"><input data-id="8" placeholder="Your name"></input><input data-id="9" placeholder="Your job position"></input><div data-id="10" class="__cur-14 __p-15 __bgc-16 __rl-17">Submit</div></div></div></div></div></body><style id="styles">
 .__w-1 { width: 100%; }
 .__h-2 { height: 100%; }
 .__w-3 { width: 100%; }
@@ -344,25 +344,11 @@ padding-bottom: 3px;
 .__jc-11 { justify-content: center; }
 .__ali-12 { align-items: center; }
 .__g-13 { gap: 1rem; }
-.__g-15 { gap: 0.25rem; }
-.__rl-16 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; }
-body.mobile .__rl-16 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; }
-.__p-18 { padding: 0.5rem; }
-.__mb-19 { margin-bottom: 0.25rem; }
-.__bw-20 { border-width: 1px; }
-.__bc-21 { border-color: #434547; }
-.__g-23 { gap: 0.25rem; }
-.__rl-24 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; }
-body.mobile .__rl-24 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; }
-.__p-26 { padding: 0.5rem; }
-.__mb-27 { margin-bottom: 0.25rem; }
-.__bw-28 { border-width: 1px; }
-.__bc-29 { border-color: #434547; }
-.__cur-30 { cursor: pointer; }
-.__p-31 { padding: 0.5rem; }
-.__bgc-32 { background-color: #2dd4bf; }
-.__rl-33 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; }
-body.mobile .__rl-33 {  font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px; }
+.__cur-14 { cursor: pointer; }
+.__p-15 { padding: 0.5rem; }
+.__bgc-16 { background-color: #2dd4bf; }
+.__rl-17 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; }
+body.mobile .__rl-17 {  font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px; }
 </style>
 <script>
 (function() {
@@ -378,6 +364,26 @@ parenti0.setProperty(fastn_dom.PropertyKind.Height, fastn_dom.Resizing.FillConta
 parenti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn_dom.AlignContent.Center, inherited);
 parenti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(2)), inherited);
 parenti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+global.harshdoesdev_github_io_quick_demo___state
+], function () {
+return (fastn_utils.getter(global.harshdoesdev_github_io_quick_demo___state) == "SUCCESS");
+}, function (root) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
+rooti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(1)), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, "Your User Id is:", inherited);
+},
+function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, global.harshdoesdev_github_io_quick_demo___user.get("id"), inherited);
+}
+]), inherited);
+return rooti0;
+});
+},
+function (root, inherited) {
 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
 rooti0.setProperty(fastn_dom.PropertyKind.StringValue, global.harshdoesdev_github_io_quick_demo___state, inherited);
 },
@@ -389,28 +395,41 @@ rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContaine
 rooti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn_dom.AlignContent.Center, inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(1)), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
-let rooti0 = harshdoesdev_github_io_quick__text_field(root, inherited, {
-label: "Full name",
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.TextInput);
+rooti0.addEventHandler(fastn_dom.Event.Input, function () {
+harshdoesdev_github_io_quick__handle_input({
 key: global.harshdoesdev_github_io_quick_demo___form_key,
 name: "name",
-placeholder: "Your Full Name"
+value: fastn_utils.getNodeValue(rooti0),
+}, rooti0);
 });
+rooti0.setProperty(fastn_dom.PropertyKind.Placeholder, "Your name", inherited);
 },
 function (root, inherited) {
-let rooti0 = harshdoesdev_github_io_quick__text_field(root, inherited, {
-label: "Job Position",
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.TextInput);
+rooti0.addEventHandler(fastn_dom.Event.Input, function () {
+harshdoesdev_github_io_quick__handle_input({
 key: global.harshdoesdev_github_io_quick_demo___form_key,
 name: "job",
-placeholder: "Your Job Position"
+value: fastn_utils.getNodeValue(rooti0),
+}, rooti0);
 });
+rooti0.setProperty(fastn_dom.PropertyKind.Placeholder, "Your job position", inherited);
 },
 function (root, inherited) {
-let rooti0 = harshdoesdev_github_io_quick__button(root, inherited, {
-text: "Submit",
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, "Submit", inherited);
+rooti0.addEventHandler(fastn_dom.Event.Click, function () {
+harshdoesdev_github_io_quick_demo___submit_form({
 key: global.harshdoesdev_github_io_quick_demo___form_key,
 action: "https://reqres.in/api/users",
-state: global.harshdoesdev_github_io_quick_demo___state
+state: global.harshdoesdev_github_io_quick_demo___state,
+data: global.harshdoesdev_github_io_quick_demo___user,
+}, rooti0);
 });
+rooti0.setProperty(fastn_dom.PropertyKind.Padding, fastn_dom.Length.Rem(0.5), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("cta_primary").get("base")), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
 }
 ]), inherited);
 }
@@ -425,6 +444,9 @@ __fastn_package_name__ = __fastn_super_package_name__;
 global["main"] = main;
 fastn_utils.createNestedObject(global, "harshdoesdev_github_io_quick__initial_state", fastn.mutable("INITIAL"));
 fastn_utils.createNestedObject(global, "harshdoesdev_github_io_quick_demo___state", fastn_utils.clone(global.harshdoesdev_github_io_quick__initial_state));
+fastn_utils.createNestedObject(global, "harshdoesdev_github_io_quick_demo___user", fastn.recordInstance({
+id: ftd.empty
+}));
 let harshdoesdev_github_io_quick__handle_input = function (args)
 {
 let __fastn_super_package_name__ = __fastn_package_name__;
@@ -439,81 +461,8 @@ __fastn_package_name__ = __fastn_super_package_name__;
 }
 }
 global["harshdoesdev_github_io_quick__handle_input"] = harshdoesdev_github_io_quick__handle_input;
-let harshdoesdev_github_io_quick__text_field = function (parent, inherited, args)
-{
-let __fastn_super_package_name__ = __fastn_package_name__;
-__fastn_package_name__ = "harshdoesdev_github_io_quick";
-try {
-let __args__ = {
-full_width: false,
-placeholder: null,
-multiline: false,
-};
-inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
-__args__ = fastn_utils.getArgs(__args__, args);
-let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Column);
-parenti0.setProperty(fastn_dom.PropertyKind.Width, fastn.formula([__args__.full_width], function () {
-if (function () {
-return fastn_utils.getter(__args__.full_width);
-}()) {
-return fastn_dom.Resizing.FillContainer;
-}
-}
-), inherited);
-parenti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(0.25)), inherited);
-parenti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
-fastn_dom.conditionalDom(root, [
-__args__.label
-], function () {
-return (!ftd.is_empty(__args__.label));
-}, function (root) {
-let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
-rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.label, inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_large"), inherited);
-return rooti0;
-});
-},
-function (root, inherited) {
-let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.TextInput);
-rooti0.addEventHandler(fastn_dom.Event.Input, function () {
-harshdoesdev_github_io_quick__handle_input({
-key: __args__.key,
-name: __args__.name,
-value: fastn_utils.getNodeValue(rooti0),
-}, rooti0);
-});
-rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn.formula([__args__.full_width], function () {
-if (function () {
-return fastn_utils.getter(__args__.full_width);
-}()) {
-return fastn_dom.Resizing.FillContainer;
-}
-}
-), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Padding, fastn_dom.Length.Rem(0.5), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.MarginBottom, fastn_dom.Length.Rem(0.25), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.BorderWidth, fastn_dom.Length.Px(1), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.BorderColor, inherited.get("colors").get("border"), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Placeholder, fastn.formula([__args__.placeholder,
-__args__.placeholder], function () {
-if (function () {
-return (!ftd.is_empty(__args__.placeholder));
-}()) {
-return __args__.placeholder;
-}
-}
-), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Multiline, __args__.multiline, inherited);
-}
-]), inherited);
-return parenti0;
-} finally {
-__fastn_package_name__ = __fastn_super_package_name__;
-}
-}
-global["harshdoesdev_github_io_quick__text_field"] = harshdoesdev_github_io_quick__text_field;
 fastn_utils.createNestedObject(global, "harshdoesdev_github_io_quick_demo___form_key", "user-registration-form");
-let harshdoesdev_github_io_quick__submit_form = function (args)
+let harshdoesdev_github_io_quick_demo___submit_form = function (args)
 {
 let __fastn_super_package_name__ = __fastn_package_name__;
 __fastn_package_name__ = "harshdoesdev_github_io_quick";
@@ -521,39 +470,12 @@ try {
 let __args__ = fastn_utils.getArgs({
 }, args);
 let form = quickform(__args__.key);
-return (form.post(__args__.action, __args__.state));
+return (form.post(__args__.action, __args__.state, null, __args__.data));
 } finally {
 __fastn_package_name__ = __fastn_super_package_name__;
 }
 }
-global["harshdoesdev_github_io_quick__submit_form"] = harshdoesdev_github_io_quick__submit_form;
-let harshdoesdev_github_io_quick__button = function (parent, inherited, args)
-{
-let __fastn_super_package_name__ = __fastn_package_name__;
-__fastn_package_name__ = "harshdoesdev_github_io_quick";
-try {
-let __args__ = {
-};
-inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
-__args__ = fastn_utils.getArgs(__args__, args);
-let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Text);
-parenti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.text, inherited);
-parenti0.addEventHandler(fastn_dom.Event.Click, function () {
-harshdoesdev_github_io_quick__submit_form({
-key: __args__.key,
-action: __args__.action,
-state: __args__.state,
-}, parenti0);
-});
-parenti0.setProperty(fastn_dom.PropertyKind.Padding, fastn_dom.Length.Rem(0.5), inherited);
-parenti0.setProperty(fastn_dom.PropertyKind.Background, fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("cta_primary").get("base")), inherited);
-parenti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
-return parenti0;
-} finally {
-__fastn_package_name__ = __fastn_super_package_name__;
-}
-}
-global["harshdoesdev_github_io_quick__button"] = harshdoesdev_github_io_quick__button;
+global["harshdoesdev_github_io_quick_demo___submit_form"] = harshdoesdev_github_io_quick_demo___submit_form;
 let harshdoesdev_github_io_quick__form = function (parent, inherited, args)
 {
 let __fastn_super_package_name__ = __fastn_package_name__;

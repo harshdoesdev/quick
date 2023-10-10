@@ -13,6 +13,7 @@
 
 
 
+
 ;; ==================
 ;; FORM COMPONENT
 ;; ==================
@@ -32,66 +33,6 @@ js: quickform.js
 
 
 
-;; ==================
-;; TEXT-FIELD
-;; ==================
-
--- component text-field:
-caption string label:
-string key:
-string name:
-boolean full-width: false
-optional string placeholder:
-boolean multiline: false
-
--- ftd.column:
-spacing.fixed.rem: .25
-width if { text-field.full-width }: fill-container
-
--- ftd.text: $text-field.label
-if: { !ftd.is_empty(text-field.label) }
-role: $inherited.types.label-large
-
--- ftd.text-input:
-border-width.px: 1
-border-color: $inherited.colors.border
-padding.rem: .5
-margin-bottom.rem: .25
-placeholder if { !ftd.is_empty(text-field.placeholder) }: $text-field.placeholder
-width if { text-field.full-width }: fill-container
-multiline: $text-field.multiline
-$on-input$: $handle-input(key = $text-field.key, name = $text-field.name, value = $VALUE)
-
--- end: ftd.column
-
--- end: text-field
-
-
-
-
-
-;; ==================
-;; BUTTON COMPONENT
-;; ==================
-
--- component button:
-caption string text:
-string key:
-string action:
-string $state:
-
--- ftd.text: $button.text
-role: $inherited.types.copy-small
-background.solid: $inherited.colors.cta-primary.base
-padding.rem: .5
-$on-click$: $submit-form(action = $button.action, key = $button.key, $state = $button.state)
-
--- end: button
-
-
-
-
-
 
 ;; ==================
 ;; Handle Input Change
@@ -104,23 +45,6 @@ string value:
 
 form = quickform(key);
 form.update(name, value)
-
-
-
-
-
-;; ==================
-;; Handle Form Submit
-;; ==================
-
--- void submit-form(key, action, state):
-string key:
-string action:
-string $state:
-
-form = quickform(key);
-form.post(action, state)
-
 
 
 

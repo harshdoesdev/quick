@@ -6,11 +6,32 @@
 
 -- string $state: *$quick.initial-state
 
+-- record user-model:
+string id:
+
+-- user-model user:
+id: $ftd.empty
+
+
+
+
+
+
 -- ftd.column:
 align-content: center
 width: fill-container
 height: fill-container
 spacing.fixed.rem: 2
+
+-- ftd.row:
+spacing.fixed.rem: 1
+if: { state == "SUCCESS" }
+
+-- ftd.text: Your User Id is:
+
+-- ftd.text: $user.id
+
+-- end: ftd.row
 
 ;; PRINT CURRENT FORM STATE
 
@@ -25,23 +46,35 @@ width: fill-container
 align-content: center
 spacing.fixed.rem: 1
 
--- quick.text-field: Full name
-key: $form-key
-name: name
-placeholder: Your Full Name
+-- ftd.text-input:
+placeholder: Your name
+$on-input$: $quick.handle-input(key = $form-key, name = name, value = $VALUE)
 
--- quick.text-field: Job Position
-key: $form-key
-name: job
-placeholder: Your Job Position
+-- ftd.text-input:
+placeholder: Your job position
+$on-input$: $quick.handle-input(key = $form-key, name = job, value = $VALUE)
 
--- quick.button: Submit
-key: $form-key
-action: https://reqres.in/api/users
-$state: $state
+-- ftd.text: Submit
+role: $inherited.types.copy-small
+background.solid: $inherited.colors.cta-primary.base
+padding.rem: .5
+$on-click$: $submit-form(action = https://reqres.in/api/users, key = $form-key, $state = $state, data = $user)
 
 -- end: ftd.column
 
 -- end: quick.form
 
 -- end: ftd.column
+
+
+
+
+
+-- void submit-form(key, action, state, data):
+string key:
+string action:
+string $state:
+user-model data:
+
+form = quickform(key);
+form.post(action, state, null, data)
